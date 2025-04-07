@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stop Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f9f9f9;
+      }
+      .form-container {
+        background: #fff;
+        padding: 20px 30px;
+        max-width: 800px;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .form-container h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+      }
+      .form-field {
+        margin-bottom: 15px;
+      }
+      .form-field label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .form-field input[type="text"],
+      .form-field input[type="number"],
+      .form-field input[type="datetime-local"],
+      .form-field input[type="tel"],
+      .form-field select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+      }
+      .checkbox-group {
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #f5f5f5;
+      }
+      .checkbox-group legend {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .checkbox-group label {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .submit-button {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .submit-button button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 2px;
+        background-color: #4285f4;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>RIPA Stop Form</h1>
+      <form id="ripa-stop-form" action="#" method="post">
+        <!-- Free Text Fields -->
+        <div class="form-field">
+          <label for="agencyOri">Agency ORI</label>
+          <input
+            type="text"
+            id="agencyOri"
+            name="agencyOri"
+            placeholder="Enter Agency ORI"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="officerID">Officer ID</label>
+          <input
+            type="text"
+            id="officerID"
+            name="officerID"
+            placeholder="Enter Officer ID"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="officerYearsOfService">Officer Years of Service</label>
+          <input
+            type="number"
+            id="officerYearsOfService"
+            name="officerYearsOfService"
+            placeholder="Enter Years of Service"
+          />
+        </div>
+
+        <!-- Select Field using enum -->
+        <div class="form-field">
+          <label for="officerTypeOfAssignment"
+            >Officer Type of Assignment</label
+          >
+          <select id="officerTypeOfAssignment" name="officerTypeOfAssignment">
+            <option value="">--Select--</option>
+            <option value="COMPLIANCE_CHECK">COMPLIANCE_CHECK</option>
+            <option value="GANG_ENFORCEMENT">GANG_ENFORCEMENT</option>
+            <option value="INVESTIGATIVE_DETECTIVE">
+              INVESTIGATIVE_DETECTIVE
+            </option>
+            <option value="K_12_PUBLIC_SCHOOL">K_12_PUBLIC_SCHOOL</option>
+            <option value="NARCOTICS_VICE">NARCOTICS_VICE</option>
+            <option value="OTHER">OTHER</option>
+            <option value="PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS">
+              PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS
+            </option>
+            <option value="ROADBLOCK_CHECKPOINT">ROADBLOCK_CHECKPOINT</option>
+            <option value="SPECIAL_EVENTS">SPECIAL_EVENTS</option>
+            <option value="TASK_FORCE">TASK_FORCE</option>
+          </select>
+        </div>
+
+        <!-- Date Time Field (ISO 8601) -->
+        <div class="form-field">
+          <label for="dateAndTimeOfStop">Date and Time of Stop</label>
+          <input
+            type="datetime-local"
+            id="dateAndTimeOfStop"
+            name="dateAndTimeOfStop"
+            placeholder="YYYY-MM-DDTHH:MM:SSZ"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="durationOfStopMinutes">Duration of Stop (Minutes)</label>
+          <input
+            type="number"
+            id="durationOfStopMinutes"
+            name="durationOfStopMinutes"
+            placeholder="Enter stop duration in minutes"
+          />
+        </div>
+
+        <!-- Select Field using enum (Field type is enum) -->
+        <div class="form-field">
+          <label for="responseToCallForService"
+            >Response to Call for Service</label
+          >
+          <select id="responseToCallForService" name="responseToCallForService">
+            <option value="">--Select--</option>
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+          </select>
+        </div>
+
+        <!-- Free Text Fields -->
+        <div class="form-field">
+          <label for="location">Location of Stop</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Enter location details"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="addressAndCrossStreet">Address/Cross Street</label>
+          <input
+            type="text"
+            id="addressAndCrossStreet"
+            name="addressAndCrossStreet"
+            placeholder="Enter address and cross street"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter last name"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter first name"
+          />
+        </div>
+
+        <!-- Date Time Field for DOB -->
+        <div class="form-field">
+          <label for="birthdate">DOB</label>
+          <input
+            type="datetime-local"
+            id="birthdate"
+            name="birthdate"
+            placeholder="YYYY-MM-DDTHH:MM:SSZ"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="personAddress">Address of Person Stopped</label>
+          <input
+            type="text"
+            id="personAddress"
+            name="personAddress"
+            placeholder="Enter person's address"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="Enter phone number"
+          />
+        </div>
+
+        <!-- Checkbox Fields (Array with enum options) -->
+        <fieldset class="checkbox-group">
+          <legend>
+            Perceived Race Or Ethnicity Of Person Stopped (Select All That
+            Apply)
+          </legend>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="ASIAN"
+            />
+            ASIAN
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="BLACK_OR_AFRICAN_AMERICAN"
+            />
+            BLACK_OR_AFRICAN_AMERICAN
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="HISPANIC_LATINO_A"
+            />
+            HISPANIC_LATINO_A
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="MIDDLE_EASTERN_OR_SOUTH_ASIAN"
+            />
+            MIDDLE_EASTERN_OR_SOUTH_ASIAN
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="NATIVE_AMERICAN"
+            />
+            NATIVE_AMERICAN
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="PACIFIC_ISLANDER"
+            />
+            PACIFIC_ISLANDER
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedRaceOrEthnicityOfPersonStopped[]"
+              value="WHITE"
+            />
+            WHITE
+          </label>
+        </fieldset>
+
+        <fieldset class="checkbox-group">
+          <legend>Perceived Gender Of Person Stopped</legend>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedGenderOfPersonStopped[]"
+              value="CISGENDER_MAN_BOY"
+            />
+            CISGENDER_MAN_BOY
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedGenderOfPersonStopped[]"
+              value="CISGENDER_WOMAN_GIRL"
+            />
+            CISGENDER_WOMAN_GIRL
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedGenderOfPersonStopped[]"
+              value="NON_BINARY"
+            />
+            NON_BINARY
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedGenderOfPersonStopped[]"
+              value="TRANSGENDER_MAN_BOY"
+            />
+            TRANSGENDER_MAN_BOY
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="perceivedGenderOfPersonStopped[]"
+              value="TRANSGENDER_WOMAN_GIRL"
+            />
+            TRANSGENDER_WOMAN_GIRL
+          </label>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="perceivedAgeOfPersonStopped"
+            >Perceived Age Of Person Stopped</label
+          >
+          <input
+            type="number"
+            id="perceivedAgeOfPersonStopped"
+            name="perceivedAgeOfPersonStopped"
+            placeholder="Enter perceived age"
+          />
+        </div>
+
+        <div class="submit-button">
+          <button type="submit">Submit Form</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
