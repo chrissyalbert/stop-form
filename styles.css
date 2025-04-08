@@ -26,8 +26,17 @@ h1 {
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 15px;
+  align-items: flex-start;
 }
 
+/*  Section headings (h3) in form rows to take full width */
+.form-row > h3 {
+  flex: 0 0 100%;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+/* Form Field styles */
 .form-field {
   flex: 1 1 45%;
   display: flex;
