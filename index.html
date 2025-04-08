@@ -55,7 +55,7 @@
                 name="officerTypeOfAssignment[]"
                 value="COMPLIANCE_CHECK"
               />
-              COMPLIANCE_CHECK
+              Compliance check
             </label>
             <label>
               <input
@@ -63,7 +63,7 @@
                 name="officerTypeOfAssignment[]"
                 value="GANG_ENFORCEMENT"
               />
-              GANG_ENFORCEMENT
+              Gang enforcement
             </label>
             <label>
               <input
@@ -71,7 +71,7 @@
                 name="officerTypeOfAssignment[]"
                 value="INVESTIGATIVE_DETECTIVE"
               />
-              INVESTIGATIVE_DETECTIVE
+              Investigative/detective
             </label>
             <label>
               <input
@@ -79,7 +79,7 @@
                 name="officerTypeOfAssignment[]"
                 value="K_12_PUBLIC_SCHOOL"
               />
-              K_12_PUBLIC_SCHOOL
+              K-12 Public school
             </label>
             <label>
               <input
@@ -87,7 +87,7 @@
                 name="officerTypeOfAssignment[]"
                 value="NARCOTICS_VICE"
               />
-              NARCOTICS_VICE
+              Narcotics/vice
             </label>
             <label>
               <input
@@ -95,7 +95,7 @@
                 name="officerTypeOfAssignment[]"
                 value="OTHER"
               />
-              OTHER
+              Other
             </label>
             <label>
               <input
@@ -103,7 +103,7 @@
                 name="officerTypeOfAssignment[]"
                 value="PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS"
               />
-              PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS
+              Patrol, traffic enforcement, field operations
             </label>
             <label>
               <input
@@ -111,7 +111,7 @@
                 name="officerTypeOfAssignment[]"
                 value="ROADBLOCK_CHECKPOINT"
               />
-              ROADBLOCK_CHECKPOINT
+              Roadblock or DUI sobriety checkpoint
             </label>
             <label>
               <input
@@ -119,7 +119,7 @@
                 name="officerTypeOfAssignment[]"
                 value="SPECIAL_EVENTS"
               />
-              SPECIAL_EVENTS
+              Special events
             </label>
             <label>
               <input
@@ -127,7 +127,7 @@
                 name="officerTypeOfAssignment[]"
                 value="TASK_FORCE"
               />
-              TASK_FORCE
+              Task force
             </label>
           </fieldset>
         </div>
@@ -174,80 +174,83 @@
 
         <!-- Row 4: Location of Stop -->
         <div class="form-row">
-          <div class="three-col-row"></div>
-          <div class="form-field one-col">
-            <label for="location">Location of Stop</label>
-            <input
-              type="text"
-              id="location"
-              name="location"
-              placeholder="Enter location details"
-            />
-          </div>
-          <div class="form-field two-col">
-            <label for="addressAndCrossStreet">Address/Cross Street</label>
-            <input
-              type="text"
-              id="addressAndCrossStreet"
-              name="addressAndCrossStreet"
-              placeholder="Enter address and cross street"
-            />
+          <div class="three-col-row">
+            <div class="form-field one-col">
+              <label for="location">Location of Stop</label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="Enter location details"
+              />
+            </div>
+            <div class="form-field two-col">
+              <label for="addressAndCrossStreet">Address/Cross Street</label>
+              <input
+                type="text"
+                id="addressAndCrossStreet"
+                name="addressAndCrossStreet"
+                placeholder="Enter address and cross street"
+              />
+            </div>
           </div>
         </div>
 
         <!-- Row 5:  Name and DOB -->
         <div class="form-row">
           <h3>III. Officer Perception of Person Stopped</h3>
-          <div class="three-col-row"></div>
-          <div class="form-field one-col">
-            <label for="lastName">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              placeholder="Enter last name"
-            />
-          </div>
-          <div class="form-field one-col">
-            <label for="firstName">First Name</label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              placeholder="Enter first name"
-            />
-          </div>
-          <div class="form-field one-col">
-            <label for="birthdate">DOB</label>
-            <input
-              type="datetime-local"
-              id="birthdate"
-              name="birthdate"
-              placeholder="YYYY-MM-DDTHH:MM:SSZ"
-            />
+          <div class="three-col-row">
+            <div class="form-field one-col">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter last name"
+              />
+            </div>
+            <div class="form-field one-col">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter first name"
+              />
+            </div>
+            <div class="form-field one-col">
+              <label for="birthdate">DOB</label>
+              <input
+                type="datetime-local"
+                id="birthdate"
+                name="birthdate"
+                placeholder="YYYY-MM-DDTHH:MM:SSZ"
+              />
+            </div>
           </div>
         </div>
 
         <!-- Row 6: Phone Number and Address of Person Stopped -->
         <div class="form-row">
-          <div class="three-col-row"></div>
-          <div class="form-field one-col">
-            <label for="phoneNumber">Phone Number</label>
-            <input
-              type="tel"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="Enter phone number"
-            />
-          </div>
-          <div class="form-field two-col">
-            <label for="personAddress">Address of Person Stopped</label>
-            <input
-              type="text"
-              id="personAddress"
-              name="personAddress"
-              placeholder="Enter person's address"
-            />
+          <div class="three-col-row">
+            <div class="form-field one-col">
+              <label for="phoneNumber">Phone Number</label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                placeholder="Enter phone number"
+              />
+            </div>
+            <div class="form-field two-col">
+              <label for="personAddress">Address of Person Stopped</label>
+              <input
+                type="text"
+                id="personAddress"
+                name="personAddress"
+                placeholder="Enter person's address"
+              />
+            </div>
           </div>
         </div>
 
@@ -263,7 +266,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="ASIAN"
             />
-            ASIAN
+            Asian
           </label>
           <label>
             <input
@@ -271,7 +274,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="BLACK_OR_AFRICAN_AMERICAN"
             />
-            BLACK_OR_AFRICAN_AMERICAN
+            Black/African American
           </label>
           <label>
             <input
@@ -279,7 +282,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="HISPANIC_LATINO_A"
             />
-            HISPANIC_LATINO_A
+            Hispanic/Latino(a)
           </label>
           <label>
             <input
@@ -287,7 +290,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="MIDDLE_EASTERN_OR_SOUTH_ASIAN"
             />
-            MIDDLE_EASTERN_OR_SOUTH_ASIAN
+            Middle Eastern or South Asian
           </label>
           <label>
             <input
@@ -295,7 +298,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="NATIVE_AMERICAN"
             />
-            NATIVE_AMERICAN
+            Native American
           </label>
           <label>
             <input
@@ -303,7 +306,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="PACIFIC_ISLANDER"
             />
-            PACIFIC_ISLANDER
+            Pacific Islander
           </label>
           <label>
             <input
@@ -311,7 +314,7 @@
               name="perceivedRaceOrEthnicityOfPersonStopped[]"
               value="WHITE"
             />
-            WHITE
+            White
           </label>
         </fieldset>
 
@@ -324,7 +327,7 @@
               name="perceivedGenderOfPersonStopped[]"
               value="CISGENDER_MAN_BOY"
             />
-            CISGENDER_MAN_BOY
+            Male
           </label>
           <label>
             <input
@@ -332,7 +335,7 @@
               name="perceivedGenderOfPersonStopped[]"
               value="CISGENDER_WOMAN_GIRL"
             />
-            CISGENDER_WOMAN_GIRL
+            Female
           </label>
           <label>
             <input
@@ -340,7 +343,7 @@
               name="perceivedGenderOfPersonStopped[]"
               value="NON_BINARY"
             />
-            NON_BINARY
+            Gender Nonconforming
           </label>
           <label>
             <input
@@ -348,7 +351,7 @@
               name="perceivedGenderOfPersonStopped[]"
               value="TRANSGENDER_MAN_BOY"
             />
-            TRANSGENDER_MAN_BOY
+            Transgender man/boy
           </label>
           <label>
             <input
@@ -356,7 +359,7 @@
               name="perceivedGenderOfPersonStopped[]"
               value="TRANSGENDER_WOMAN_GIRL"
             />
-            TRANSGENDER_WOMAN_GIRL
+            Transgender woman/girl
           </label>
         </fieldset>
 
