@@ -96,6 +96,10 @@ h1 {
   align-items: center;
 }
 
+.checkbox-group label input[type="checkbox"] {
+  margin-right: 8px; /* or however much space you want */
+}
+
 /* Submit Button */
 .submit-button {
   text-align: right;
