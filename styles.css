@@ -97,7 +97,7 @@ h1 {
 }
 
 .checkbox-group label input[type="checkbox"] {
-  margin-right: 8px; /* or however much space you want */
+  margin-right: 8px;
 }
 
 /* Submit Button */
