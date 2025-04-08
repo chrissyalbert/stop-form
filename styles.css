@@ -37,6 +37,21 @@ h1 {
 }
 
 /* Form Field styles */
+.three-field-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; 
+}
+
+.three-field-row .one-third {
+  flex: 0 0 33.33%;
+
+}
+
+.three-field-row .two-thirds {
+  flex: 0 0 66.66%;
+}
+
 .form-field {
   flex: 1 1 45%;
   display: flex;

@@ -12,32 +12,36 @@
         <!-- Row 1: Agency ORI and Officer ID -->
         <div class="form-row">
           <h3>I. Reporting Officer</h3>
-          <div class="form-field">
-            <label for="agencyOri">Agency ORI</label>
-            <input
-              type="text"
-              id="agencyOri"
-              name="agencyOri"
-              placeholder="Enter Agency ORI"
-            />
-          </div>
-          <div class="form-field">
-            <label for="officerID">Officer ID</label>
-            <input
-              type="text"
-              id="officerID"
-              name="officerID"
-              placeholder="Enter Officer ID"
-            />
-          </div>
-          <div class="form-field">
-            <label for="officerYearsOfService">Officer Years of Service</label>
-            <input
-              type="number"
-              id="officerYearsOfService"
-              name="officerYearsOfService"
-              placeholder="Enter Years of Service"
-            />
+          <div class="three-field-row">
+            <div class="form-field one-third">
+              <label for="agencyOri">Agency ORI</label>
+              <input
+                type="text"
+                id="agencyOri"
+                name="agencyOri"
+                placeholder="Enter Agency ORI"
+              />
+            </div>
+            <div class="form-field one-third">
+              <label for="officerID">Officer ID</label>
+              <input
+                type="text"
+                id="officerID"
+                name="officerID"
+                placeholder="Enter Officer ID"
+              />
+            </div>
+            <div class="form-field one-third">
+              <label for="officerYearsOfService"
+                >Officer Years of Service</label
+              >
+              <input
+                type="number"
+                id="officerYearsOfService"
+                name="officerYearsOfService"
+                placeholder="Enter Years of Service"
+              />
+            </div>
           </div>
         </div>
 
@@ -131,44 +135,47 @@
         <!-- Row 3: Date and Time of Stop and Duration -->
         <div class="form-row">
           <h3>II. Setting</h3>
-          <div class="form-field">
-            <label for="dateAndTimeOfStop">Date and Time of Stop</label>
-            <input
-              type="datetime-local"
-              id="dateAndTimeOfStop"
-              name="dateAndTimeOfStop"
-              placeholder="YYYY-MM-DDTHH:MM:SSZ"
-            />
-          </div>
-          <div class="form-field">
-            <label for="durationOfStopMinutes"
-              >Duration of Stop (Minutes)</label
-            >
-            <input
-              type="number"
-              id="durationOfStopMinutes"
-              name="durationOfStopMinutes"
-              placeholder="Enter duration in minutes"
-            />
-          </div>
-          <div class="form-field">
-            <label for="responseToCallForService"
-              >Response to Call for Service</label
-            >
-            <select
-              id="responseToCallForService"
-              name="responseToCallForService"
-            >
-              <option value="">--Select--</option>
-              <option value="YES">YES</option>
-              <option value="NO">NO</option>
-            </select>
+          <div class="three-field-row">
+            <div class="form-field one-third">
+              <label for="dateAndTimeOfStop">Date and Time of Stop</label>
+              <input
+                type="datetime-local"
+                id="dateAndTimeOfStop"
+                name="dateAndTimeOfStop"
+                placeholder="YYYY-MM-DDTHH:MM:SSZ"
+              />
+            </div>
+            <div class="form-field one-third">
+              <label for="durationOfStopMinutes"
+                >Duration of Stop (Minutes)</label
+              >
+              <input
+                type="number"
+                id="durationOfStopMinutes"
+                name="durationOfStopMinutes"
+                placeholder="Enter duration in minutes"
+              />
+            </div>
+            <div class="form-field one-third">
+              <label for="responseToCallForService"
+                >Response to Call for Service</label
+              >
+              <select
+                id="responseToCallForService"
+                name="responseToCallForService"
+              >
+                <option value="">--Select--</option>
+                <option value="YES">YES</option>
+                <option value="NO">NO</option>
+              </select>
+            </div>
           </div>
         </div>
 
         <!-- Row 4: Location of Stop -->
         <div class="form-row">
-          <div class="form-field">
+          <div class="three-field-row"></div>
+          <div class="form-field one-third">
             <label for="location">Location of Stop</label>
             <input
               type="text"
@@ -177,7 +184,7 @@
               placeholder="Enter location details"
             />
           </div>
-          <div class="form-field">
+          <div class="form-field two-thirds">
             <label for="addressAndCrossStreet">Address/Cross Street</label>
             <input
               type="text"
@@ -191,7 +198,8 @@
         <!-- Row 5:  Name and DOB -->
         <div class="form-row">
           <h3>III. Officer Perception of Person Stopped</h3>
-          <div class="form-field">
+          <div class="three-field-row"></div>
+          <div class="form-field one-third">
             <label for="lastName">Last Name</label>
             <input
               type="text"
@@ -200,7 +208,7 @@
               placeholder="Enter last name"
             />
           </div>
-          <div class="form-field">
+          <div class="form-field one-third">
             <label for="firstName">First Name</label>
             <input
               type="text"
@@ -209,7 +217,7 @@
               placeholder="Enter first name"
             />
           </div>
-          <div class="form-field">
+          <div class="form-field one-third">
             <label for="birthdate">DOB</label>
             <input
               type="datetime-local"
@@ -222,7 +230,8 @@
 
         <!-- Row 6: Phone Number and Address of Person Stopped -->
         <div class="form-row">
-          <div class="form-field">
+          <div class="three-field-row"></div>
+          <div class="form-field one-third">
             <label for="phoneNumber">Phone Number</label>
             <input
               type="tel"
@@ -231,7 +240,7 @@
               placeholder="Enter phone number"
             />
           </div>
-          <div class="form-field">
+          <div class="form-field two-thirds">
             <label for="personAddress">Address of Person Stopped</label>
             <input
               type="text"
