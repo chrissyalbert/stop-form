@@ -3,238 +3,246 @@
   <head>
     <meta charset="UTF-8" />
     <title>Stop Form</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #f9f9f9;
-      }
-      .form-container {
-        background: #fff;
-        padding: 20px 30px;
-        max-width: 800px;
-        margin: 0 auto;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      .form-container h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 24px;
-      }
-      .form-field {
-        margin-bottom: 15px;
-      }
-      .form-field label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-      }
-      .form-field input[type="text"],
-      .form-field input[type="number"],
-      .form-field input[type="datetime-local"],
-      .form-field input[type="tel"],
-      .form-field select {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-        border: 1px solid #ccc;
-        border-radius: 2px;
-      }
-      .checkbox-group {
-        border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 4px;
-        background-color: #f5f5f5;
-      }
-      .checkbox-group legend {
-        font-weight: bold;
-        margin-bottom: 8px;
-      }
-      .checkbox-group label {
-        display: inline-block;
-        margin-right: 10px;
-      }
-      .submit-button {
-        text-align: center;
-        margin-top: 20px;
-      }
-      .submit-button button {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 2px;
-        background-color: #4285f4;
-        color: #fff;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="form-container">
-      <h1>RIPA Stop Form</h1>
+      <h1>Stop Form</h1>
       <form id="ripa-stop-form" action="#" method="post">
-        <!-- Free Text Fields -->
-        <div class="form-field">
-          <label for="agencyOri">Agency ORI</label>
-          <input
-            type="text"
-            id="agencyOri"
-            name="agencyOri"
-            placeholder="Enter Agency ORI"
-          />
+        <!-- Row 1: Agency ORI and Officer ID -->
+        <div class="form-row">
+          <h3>I. Reporting Officer</h3>
+          <div class="form-field">
+            <label for="agencyOri">Agency ORI</label>
+            <input
+              type="text"
+              id="agencyOri"
+              name="agencyOri"
+              placeholder="Enter Agency ORI"
+            />
+          </div>
+          <div class="form-field">
+            <label for="officerID">Officer ID</label>
+            <input
+              type="text"
+              id="officerID"
+              name="officerID"
+              placeholder="Enter Officer ID"
+            />
+          </div>
+          <div class="form-field">
+            <label for="officerYearsOfService">Officer Years of Service</label>
+            <input
+              type="number"
+              id="officerYearsOfService"
+              name="officerYearsOfService"
+              placeholder="Enter Years of Service"
+            />
+          </div>
         </div>
 
-        <div class="form-field">
-          <label for="officerID">Officer ID</label>
-          <input
-            type="text"
-            id="officerID"
-            name="officerID"
-            placeholder="Enter Officer ID"
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="officerYearsOfService">Officer Years of Service</label>
-          <input
-            type="number"
-            id="officerYearsOfService"
-            name="officerYearsOfService"
-            placeholder="Enter Years of Service"
-          />
-        </div>
-
-        <!-- Select Field using enum -->
-        <div class="form-field">
-          <label for="officerTypeOfAssignment"
-            >Officer Type of Assignment</label
-          >
-          <select id="officerTypeOfAssignment" name="officerTypeOfAssignment">
-            <option value="">--Select--</option>
-            <option value="COMPLIANCE_CHECK">COMPLIANCE_CHECK</option>
-            <option value="GANG_ENFORCEMENT">GANG_ENFORCEMENT</option>
-            <option value="INVESTIGATIVE_DETECTIVE">
+        <!-- Row 2: Officer Type of Assignment Checkbox Array field-->
+        <div class="form-row">
+          <fieldset class="checkbox-group">
+            <legend>Officer Type of Assignment</legend>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="COMPLIANCE_CHECK"
+              />
+              COMPLIANCE_CHECK
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="GANG_ENFORCEMENT"
+              />
+              GANG_ENFORCEMENT
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="INVESTIGATIVE_DETECTIVE"
+              />
               INVESTIGATIVE_DETECTIVE
-            </option>
-            <option value="K_12_PUBLIC_SCHOOL">K_12_PUBLIC_SCHOOL</option>
-            <option value="NARCOTICS_VICE">NARCOTICS_VICE</option>
-            <option value="OTHER">OTHER</option>
-            <option value="PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS">
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="K_12_PUBLIC_SCHOOL"
+              />
+              K_12_PUBLIC_SCHOOL
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="NARCOTICS_VICE"
+              />
+              NARCOTICS_VICE
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="OTHER"
+              />
+              OTHER
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS"
+              />
               PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS
-            </option>
-            <option value="ROADBLOCK_CHECKPOINT">ROADBLOCK_CHECKPOINT</option>
-            <option value="SPECIAL_EVENTS">SPECIAL_EVENTS</option>
-            <option value="TASK_FORCE">TASK_FORCE</option>
-          </select>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="ROADBLOCK_CHECKPOINT"
+              />
+              ROADBLOCK_CHECKPOINT
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="SPECIAL_EVENTS"
+              />
+              SPECIAL_EVENTS
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="officerTypeOfAssignment[]"
+                value="TASK_FORCE"
+              />
+              TASK_FORCE
+            </label>
+          </fieldset>
         </div>
 
-        <!-- Date Time Field (ISO 8601) -->
-        <div class="form-field">
-          <label for="dateAndTimeOfStop">Date and Time of Stop</label>
-          <input
-            type="datetime-local"
-            id="dateAndTimeOfStop"
-            name="dateAndTimeOfStop"
-            placeholder="YYYY-MM-DDTHH:MM:SSZ"
-          />
+        <!-- Row 3: Date and Time of Stop and Duration -->
+        <div class="form-row">
+          <h3>II. Setting</h3>
+          <div class="form-field">
+            <label for="dateAndTimeOfStop">Date and Time of Stop</label>
+            <input
+              type="datetime-local"
+              id="dateAndTimeOfStop"
+              name="dateAndTimeOfStop"
+              placeholder="YYYY-MM-DDTHH:MM:SSZ"
+            />
+          </div>
+          <div class="form-field">
+            <label for="durationOfStopMinutes"
+              >Duration of Stop (Minutes)</label
+            >
+            <input
+              type="number"
+              id="durationOfStopMinutes"
+              name="durationOfStopMinutes"
+              placeholder="Enter duration in minutes"
+            />
+          </div>
+          <div class="form-field">
+            <label for="responseToCallForService"
+              >Response to Call for Service</label
+            >
+            <select
+              id="responseToCallForService"
+              name="responseToCallForService"
+            >
+              <option value="">--Select--</option>
+              <option value="YES">YES</option>
+              <option value="NO">NO</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-field">
-          <label for="durationOfStopMinutes">Duration of Stop (Minutes)</label>
-          <input
-            type="number"
-            id="durationOfStopMinutes"
-            name="durationOfStopMinutes"
-            placeholder="Enter stop duration in minutes"
-          />
+        <!-- Row 4: Location of Stop -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="location">Location of Stop</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enter location details"
+            />
+          </div>
+          <div class="form-field">
+            <label for="addressAndCrossStreet">Address/Cross Street</label>
+            <input
+              type="text"
+              id="addressAndCrossStreet"
+              name="addressAndCrossStreet"
+              placeholder="Enter address and cross street"
+            />
+          </div>
         </div>
 
-        <!-- Select Field using enum (Field type is enum) -->
-        <div class="form-field">
-          <label for="responseToCallForService"
-            >Response to Call for Service</label
-          >
-          <select id="responseToCallForService" name="responseToCallForService">
-            <option value="">--Select--</option>
-            <option value="YES">YES</option>
-            <option value="NO">NO</option>
-          </select>
+        <!-- Row 5:  Name and DOB -->
+        <div class="form-row">
+          <h3>III. Officer Perception of Person Stopped</h3>
+          <div class="form-field">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Enter last name"
+            />
+          </div>
+          <div class="form-field">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Enter first name"
+            />
+          </div>
+          <div class="form-field">
+            <label for="birthdate">DOB</label>
+            <input
+              type="datetime-local"
+              id="birthdate"
+              name="birthdate"
+              placeholder="YYYY-MM-DDTHH:MM:SSZ"
+            />
+          </div>
         </div>
 
-        <!-- Free Text Fields -->
-        <div class="form-field">
-          <label for="location">Location of Stop</label>
-          <input
-            type="text"
-            id="location"
-            name="location"
-            placeholder="Enter location details"
-          />
+        <!-- Row 6: Phone Number and Address of Person Stopped -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phoneNumber">Phone Number</label>
+            <input
+              type="tel"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="Enter phone number"
+            />
+          </div>
+          <div class="form-field">
+            <label for="personAddress">Address of Person Stopped</label>
+            <input
+              type="text"
+              id="personAddress"
+              name="personAddress"
+              placeholder="Enter person's address"
+            />
+          </div>
         </div>
 
-        <div class="form-field">
-          <label for="addressAndCrossStreet">Address/Cross Street</label>
-          <input
-            type="text"
-            id="addressAndCrossStreet"
-            name="addressAndCrossStreet"
-            placeholder="Enter address and cross street"
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="lastName">Last Name</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            placeholder="Enter last name"
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="firstName">First Name</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            placeholder="Enter first name"
-          />
-        </div>
-
-        <!-- Date Time Field for DOB -->
-        <div class="form-field">
-          <label for="birthdate">DOB</label>
-          <input
-            type="datetime-local"
-            id="birthdate"
-            name="birthdate"
-            placeholder="YYYY-MM-DDTHH:MM:SSZ"
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="personAddress">Address of Person Stopped</label>
-          <input
-            type="text"
-            id="personAddress"
-            name="personAddress"
-            placeholder="Enter person's address"
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="phoneNumber">Phone Number</label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            placeholder="Enter phone number"
-          />
-        </div>
-
-        <!-- Checkbox Fields (Array with enum options) -->
+        <!-- Checkbox Group: Perceived Race or Ethnicity -->
         <fieldset class="checkbox-group">
           <legend>
             Perceived Race Or Ethnicity Of Person Stopped (Select All That
@@ -298,6 +306,7 @@
           </label>
         </fieldset>
 
+        <!-- Checkbox Group: Perceived Gender -->
         <fieldset class="checkbox-group">
           <legend>Perceived Gender Of Person Stopped</legend>
           <label>
@@ -342,16 +351,19 @@
           </label>
         </fieldset>
 
-        <div class="form-field">
-          <label for="perceivedAgeOfPersonStopped"
-            >Perceived Age Of Person Stopped</label
-          >
-          <input
-            type="number"
-            id="perceivedAgeOfPersonStopped"
-            name="perceivedAgeOfPersonStopped"
-            placeholder="Enter perceived age"
-          />
+        <!-- Row 8: Perceived Age -->
+        <div class="form-row">
+          <div class="form-field">
+            <label for="perceivedAgeOfPersonStopped"
+              >Perceived Age Of Person Stopped</label
+            >
+            <input
+              type="number"
+              id="perceivedAgeOfPersonStopped"
+              name="perceivedAgeOfPersonStopped"
+              placeholder="Enter perceived age"
+            />
+          </div>
         </div>
 
         <div class="submit-button">
