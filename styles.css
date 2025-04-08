@@ -37,23 +37,23 @@ h1 {
 }
 
 /* Form Field styles */
-.three-field-row {
+.three-col-row {
   display: flex;
-  justify-content: space-between;
-  gap: 10px; 
+  flex: 0 0 100%;
+  gap: 20px;
 }
 
-.three-field-row .one-third {
-  flex: 0 0 33.33%;
-
+.three-col-row .one-col {
+  flex: 1;
+  min-width: 0; /* Prevents flex items from overflowing */
 }
 
-.three-field-row .two-thirds {
-  flex: 0 0 66.66%;
+.three-col-row .two-col {
+  flex: 2;
+  min-width: 0; /* Prevents flex items from overflowing */
 }
 
 .form-field {
-  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
 }
@@ -96,7 +96,7 @@ h1 {
 
 /* Submit Button */
 .submit-button {
-  text-align: center;
+  text-align: right;
   margin-top: 20px;
 }
 
