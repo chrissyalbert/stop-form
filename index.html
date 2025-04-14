@@ -1,169 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Stop Form</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="form-container">
-      <h1>Stop Form</h1>
-      <form id="ripa-stop-form" action="#" method="post">
-        <!-- Row 1: Agency ORI and Officer ID -->
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Stop Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>Stop Form</h1>
+    <form id="ripa-stop-form" action="#" method="post">
+      <!-- Row 1: Agency ORI and Officer ID -->
+      <div class="form-section">
         <div class="form-row">
           <h3>I. Reporting Officer</h3>
           <div class="three-col-row">
             <div class="form-field one-col">
               <label for="agencyOri">Agency ORI</label>
-              <input
-                type="text"
-                id="agencyOri"
-                name="agencyOri"
-                placeholder="Enter Agency ORI"
-              />
+              <input type="text" id="agencyOri" name="agencyOri" />
             </div>
             <div class="form-field one-col">
               <label for="officerID">Officer ID</label>
-              <input
-                type="text"
-                id="officerID"
-                name="officerID"
-                placeholder="Enter Officer ID"
-              />
+              <input type="text" id="officerID" name="officerID" />
             </div>
             <div class="form-field one-col">
-              <label for="officerYearsOfService"
-                >Officer Years of Service</label
-              >
-              <input
-                type="number"
-                id="officerYearsOfService"
-                name="officerYearsOfService"
-                placeholder="Enter Years of Service"
-              />
+              <label for="officerYearsOfService">Officer Years of Service</label>
+              <input type="number" id="officerYearsOfService" name="officerYearsOfService" />
             </div>
           </div>
+
         </div>
 
         <!-- Row 2: Officer Type of Assignment Checkbox Array field-->
         <div class="form-row">
+          <label class="checkbox-title">Officer Type of Assignment</label>
           <fieldset class="checkbox-group">
-            <legend>Officer Type of Assignment</legend>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="COMPLIANCE_CHECK"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="COMPLIANCE_CHECK" />
               Compliance check
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="GANG_ENFORCEMENT"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="GANG_ENFORCEMENT" />
               Gang enforcement
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="INVESTIGATIVE_DETECTIVE"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="INVESTIGATIVE_DETECTIVE" />
               Investigative/detective
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="K_12_PUBLIC_SCHOOL"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="K_12_PUBLIC_SCHOOL" />
               K-12 Public school
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="NARCOTICS_VICE"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="NARCOTICS_VICE" />
               Narcotics/vice
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="OTHER"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="OTHER" />
               Other
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]"
+                value="PATROL_TRAFFIC_ENFORCEMENT_FIELD_OPERATIONS" />
               Patrol, traffic enforcement, field operations
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="ROADBLOCK_CHECKPOINT"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="ROADBLOCK_CHECKPOINT" />
               Roadblock or DUI sobriety checkpoint
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="SPECIAL_EVENTS"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="SPECIAL_EVENTS" />
               Special events
             </label>
             <label>
-              <input
-                type="checkbox"
-                name="officerTypeOfAssignment[]"
-                value="TASK_FORCE"
-              />
+              <input type="checkbox" name="officerTypeOfAssignment[]" value="TASK_FORCE" />
               Task force
             </label>
           </fieldset>
         </div>
+      </div>
 
-        <!-- Row 3: Date and Time of Stop and Duration -->
+      <!-- Row 3: Date and Time of Stop and Duration -->
+      <div class="form-section">
         <div class="form-row">
           <h3>II. Setting</h3>
           <div class="three-col-row">
             <div class="form-field one-col">
               <label for="dateAndTimeOfStop">Date and Time of Stop</label>
-              <input
-                type="datetime-local"
-                id="dateAndTimeOfStop"
-                name="dateAndTimeOfStop"
-                placeholder="YYYY-MM-DDTHH:MM:SSZ"
-              />
+              <input type="datetime-local" id="dateAndTimeOfStop" name="dateAndTimeOfStop" />
             </div>
             <div class="form-field one-col">
-              <label for="durationOfStopMinutes"
-                >Duration of Stop (Minutes)</label
-              >
-              <input
-                type="number"
-                id="durationOfStopMinutes"
-                name="durationOfStopMinutes"
-                placeholder="Enter duration in minutes"
-              />
+              <label for="durationOfStopMinutes">Duration of Stop (Minutes)</label>
+              <input type="number" id="durationOfStopMinutes" name="durationOfStopMinutes" />
             </div>
             <div class="form-field one-col">
-              <label for="responseToCallForService"
-                >Response to Call for Service</label
-              >
-              <select
-                id="responseToCallForService"
-                name="responseToCallForService"
-              >
+              <label for="responseToCallForService">Response to Call for Service</label>
+              <select id="responseToCallForService" name="responseToCallForService">
                 <option value="">--Select--</option>
                 <option value="YES">YES</option>
                 <option value="NO">NO</option>
@@ -172,60 +105,40 @@
           </div>
         </div>
 
+
         <!-- Row 4: Location of Stop -->
-        <div class="form-row">
-          <div class="three-col-row">
-            <div class="form-field one-col">
-              <label for="location">Location of Stop</label>
-              <input
-                type="text"
-                id="location"
-                name="location"
-                placeholder="Enter location details"
-              />
-            </div>
-            <div class="form-field two-col">
-              <label for="addressAndCrossStreet">Address/Cross Street</label>
-              <input
-                type="text"
-                id="addressAndCrossStreet"
-                name="addressAndCrossStreet"
-                placeholder="Enter address and cross street"
-              />
+        <div class="form-section">
+          <div class="form-row">
+            <div class="three-col-row">
+              <div class="form-field one-col">
+                <label for="location">Location of Stop</label>
+                <input type="text" id="location" name="location" />
+              </div>
+              <div class="form-field two-col">
+                <label for="addressAndCrossStreet">Address/Cross Street</label>
+                <input type="text" id="addressAndCrossStreet" name="addressAndCrossStreet" />
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Row 5:  Name and DOB -->
+      <!-- Row 5:  Name and DOB -->
+      <div class="form-section">
         <div class="form-row">
           <h3>III. Officer Perception of Person Stopped</h3>
           <div class="three-col-row">
             <div class="form-field one-col">
               <label for="lastName">Last Name</label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                placeholder="Enter last name"
-              />
+              <input type="text" id="lastName" name="lastName" />
             </div>
             <div class="form-field one-col">
               <label for="firstName">First Name</label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                placeholder="Enter first name"
-              />
+              <input type="text" id="firstName" name="firstName" />
             </div>
             <div class="form-field one-col">
               <label for="birthdate">DOB</label>
-              <input
-                type="datetime-local"
-                id="birthdate"
-                name="birthdate"
-                placeholder="YYYY-MM-DDTHH:MM:SSZ"
-              />
+              <input type="datetime-local" id="birthdate" name="birthdate" />
             </div>
           </div>
         </div>
@@ -235,154 +148,103 @@
           <div class="three-col-row">
             <div class="form-field one-col">
               <label for="phoneNumber">Phone Number</label>
-              <input
-                type="tel"
-                id="phoneNumber"
-                name="phoneNumber"
-                placeholder="Enter phone number"
-              />
+              <input type="tel" id="phoneNumber" name="phoneNumber" />
             </div>
             <div class="form-field two-col">
               <label for="personAddress">Address of Person Stopped</label>
-              <input
-                type="text"
-                id="personAddress"
-                name="personAddress"
-                placeholder="Enter person's address"
-              />
+              <input type="text" id="personAddress" name="personAddress" />
             </div>
           </div>
         </div>
 
         <!-- Checkbox Group: Perceived Race or Ethnicity -->
-        <fieldset class="checkbox-group">
-          <legend>
+        <div class="form-row">
+          <label class="checkbox-title">
             Perceived Race Or Ethnicity Of Person Stopped (Select All That
             Apply)
-          </legend>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="ASIAN"
-            />
-            Asian
           </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="BLACK_OR_AFRICAN_AMERICAN"
-            />
-            Black/African American
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="HISPANIC_LATINO_A"
-            />
-            Hispanic/Latino(a)
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="MIDDLE_EASTERN_OR_SOUTH_ASIAN"
-            />
-            Middle Eastern or South Asian
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="NATIVE_AMERICAN"
-            />
-            Native American
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="PACIFIC_ISLANDER"
-            />
-            Pacific Islander
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedRaceOrEthnicityOfPersonStopped[]"
-              value="WHITE"
-            />
-            White
-          </label>
-        </fieldset>
+          <fieldset class="checkbox-group">
+
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]" value="ASIAN" />
+              Asian
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]"
+                value="BLACK_OR_AFRICAN_AMERICAN" />
+              Black/African American
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]" value="HISPANIC_LATINO_A" />
+              Hispanic/Latino(a)
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]"
+                value="MIDDLE_EASTERN_OR_SOUTH_ASIAN" />
+              Middle Eastern or South Asian
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]" value="NATIVE_AMERICAN" />
+              Native American
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]" value="PACIFIC_ISLANDER" />
+              Pacific Islander
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedRaceOrEthnicityOfPersonStopped[]" value="WHITE" />
+              White
+            </label>
+          </fieldset>
+        </div>
+
 
         <!-- Checkbox Group: Perceived Gender -->
-        <fieldset class="checkbox-group">
-          <legend>Perceived Gender Of Person Stopped</legend>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedGenderOfPersonStopped[]"
-              value="CISGENDER_MAN_BOY"
-            />
-            Male
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedGenderOfPersonStopped[]"
-              value="CISGENDER_WOMAN_GIRL"
-            />
-            Female
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedGenderOfPersonStopped[]"
-              value="NON_BINARY"
-            />
-            Gender Nonconforming
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedGenderOfPersonStopped[]"
-              value="TRANSGENDER_MAN_BOY"
-            />
-            Transgender man/boy
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="perceivedGenderOfPersonStopped[]"
-              value="TRANSGENDER_WOMAN_GIRL"
-            />
-            Transgender woman/girl
-          </label>
-        </fieldset>
+        <div class="form-row">
+          <label class="checkbox-title">Perceived Gender Of Person Stopped</label>
+          <fieldset class="checkbox-group">
+
+            <label>
+              <input type="checkbox" name="perceivedGenderOfPersonStopped[]" value="CISGENDER_MAN_BOY" />
+              Male
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedGenderOfPersonStopped[]" value="CISGENDER_WOMAN_GIRL" />
+              Female
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedGenderOfPersonStopped[]" value="NON_BINARY" />
+              Gender Nonconforming
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedGenderOfPersonStopped[]" value="TRANSGENDER_MAN_BOY" />
+              Transgender man/boy
+            </label>
+            <label>
+              <input type="checkbox" name="perceivedGenderOfPersonStopped[]" value="TRANSGENDER_WOMAN_GIRL" />
+              Transgender woman/girl
+            </label>
+          </fieldset>
+        </div>
+
 
         <!-- Row 8: Perceived Age -->
         <div class="form-row">
           <div class="form-field">
-            <label for="perceivedAgeOfPersonStopped"
-              >Perceived Age Of Person Stopped</label
-            >
-            <input
-              type="number"
-              id="perceivedAgeOfPersonStopped"
-              name="perceivedAgeOfPersonStopped"
-              placeholder="Enter perceived age"
-            />
+            <label for="perceivedAgeOfPersonStopped">Perceived Age Of Person Stopped</label>
+            <input type="number" id="perceivedAgeOfPersonStopped" name="perceivedAgeOfPersonStopped" />
           </div>
         </div>
+      </div>
 
-        <div class="submit-button">
-          <button type="submit">Submit Form</button>
-        </div>
-      </form>
-    </div>
-    <script src="formHandler.js"></script>
-  </body>
+
+      <div class="submit-button">
+        <button type="submit">Submit Form</button>
+      </div>
+  </div>
+  </form>
+  </div>
+  <script src="formHandler.js"></script>
+</body>
+
 </html>
